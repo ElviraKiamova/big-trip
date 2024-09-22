@@ -1,5 +1,5 @@
-
-import {render, RenderPosition} from './render.js';
+import {render} from './framework/render.js';
+import {RenderPosition} from './render.js';
 import FilterView from './view/filter-view.js';
 import RoutePointView from './view/route-point-view.js';
 import SortingView from './view/sorting-view.js';
