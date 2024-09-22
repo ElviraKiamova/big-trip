@@ -13,7 +13,12 @@ export default class ItemsPresenter {
   init() {
     this.#tasks = [...this.#tasksModel.getTasks()];
     for (let i = 0; i < this.#tasks.length; i++) {
-      render(new ItemView({task: this.#tasks[i]}), this.#listContainer.element);
+      this.#renderTask(this.#tasks[i]);
     }
+  }
+
+  #renderTask(task) {
+    const taskComponent = new ItemView({task});
+    render(taskComponent, this.#listContainer.element);
   }
 }
