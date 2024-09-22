@@ -28,11 +28,12 @@ function mergeDataArrays(points, offers, destinations) {
 
 const mergedData = mergeDataArrays(MOCK_POINTS, MOCK_OFFERS, MOCK_DESTINATIONS);
 export default class TasksModel {
+  #tasks = null;
   constructor() {
-    this.tasks = mergedData;
+    this.#tasks = mergedData;
   }
 
   getTasks() {
-    return this.tasks;
+    return this.#tasks;
   }
 }
