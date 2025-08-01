@@ -8,6 +8,7 @@ module.exports = {
     filename: 'bundle.[contenthash].js',
     path: path.resolve(__dirname, 'build'),
     clean: true,
+    publicPath: '/your-repo-name/',
   },
   devtool: 'source-map',
   plugins: [
